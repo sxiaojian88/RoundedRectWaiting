@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oBM-ln-0cp" customClass="RoundedWaitingView">
+                                <rect key="frame" x="180" y="180" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="8T7-4P-eQX"/>
+                                    <constraint firstAttribute="height" constant="240" id="cZW-ZG-qi7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oBM-ln-0cp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E9p-OY-36Y"/>
+                            <constraint firstItem="oBM-ln-0cp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wt0-JC-IMU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rou-hl-k5S"/>
+                    <connections>
+                        <outlet property="customView" destination="oBM-ln-0cp" id="CVj-BA-MxZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="gwa-Fw-BJI">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="3TF-H3-ja3"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="xNt-ym-PSM"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="506" y="333"/>
+        </scene>
+    </scenes>
+</document>
